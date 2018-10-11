@@ -1,9 +1,9 @@
-# node-cosmos-db-sample
+# Azure Cosmos DB Example with Node.js
 Sample code for working with the Azure Cosmos DB using the new JavaScript API 2 for Node.js + ES 2017 async / await functionality.
 
 To run the app, open index.js and set the endpoint and authKey values to match your Cosmos DB credentials (arond line 153).
 
-For instructions, see the article: [Node.js and Cloud NoSQL Databases: Azure Cosmos DB]{https://www.andreasjakl.com/?p=1274}
+For instructions, see the article: [Node.js and Cloud NoSQL Databases: Azure Cosmos DB]{https://www.andreasjakl.com/node-js-and-cloud-nosql-databases-azure-cosmos-db/}
 
 ## Related Information
 
