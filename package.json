@@ -1,0 +1,26 @@
+{
+  "name": "db-client",
+  "version": "1.0.0",
+  "description": "Example for accessing Azure Cosmos DB from Node.js using ES2017",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nosql",
+    "database",
+    "nodejs",
+    "node.js",
+    "cosmos",
+    "db",
+    "azure",
+    "cloud",
+    "es2017"
+  ],
+  "author": "Andreas Jakl",
+  "license": "MIT",
+  "dependencies": {
+    "@azure/cosmos": "^2.0.2",
+    "express": "^4.16.4"
+  }
+}
