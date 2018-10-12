@@ -30,9 +30,12 @@ app.get('/', async (req, res) => {
         endpoint: endpoint,
         auth: {
             masterKey: authKey
-        }
+        },
+        // Set consistency to "session" to ensure read-your-writes level
+        // See: https://github.com/Azure/azure-cosmos-js/issues/159
+        consistencyLevel: "Session"
     });
-
+    
     try {
         // Open a reference to the database
         const dbResponse = await cosmosClient.databases.createIfNotExists({
@@ -91,4 +94,4 @@ app.get('/', async (req, res) => {
 // Start the server, listen at port 3000 (-> http://127.0.0.1:3000/)
 // Also print a short info message to the console (visible in
 // the terminal window where you started the node server).
-app.listen(3000, () => console.log('Example app listening on port 3000!'))
+app.listen(3000, () => console.log('Node.js Cosmos DB client example listening on port 3000!'))
