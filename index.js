@@ -57,9 +57,11 @@ app.get('/', async (req, res) => {
     
         // Execute SQL query to retrieve the new item
         console.log("** SQL query **");
-        // Version with escaping the parameter
+        // Three alternatives:
+        // 1) Version with escaping the parameter
         //const queryResponse = await container.items.query("SELECT * FROM c WHERE c.id='" + querystring.escape(newItemId) + "'").toArray();
-        // Version with parameterization
+        
+        // 2) Version with parameterization
         const querySpec = {
             query: "SELECT * FROM c WHERE c.id=@id",
             parameters: [
@@ -71,6 +73,10 @@ app.get('/', async (req, res) => {
         };
         const queryResponse = await container.items.query(querySpec).toArray();
         console.log(queryResponse.result[0].name);
+
+        // 3) Read the item through an API function instead of a query
+        //const { body } = await container.item(newItemId).read();
+        //console.log(body);
 
         // Delete item
         console.log("** Delete item **");
