@@ -20,7 +20,7 @@
   "author": "Andreas Jakl",
   "license": "MIT",
   "dependencies": {
-    "@azure/cosmos": "^2.0.2",
+    "@azure/cosmos": "^2.0.5",
     "express": "^4.16.4"
   }
 }
