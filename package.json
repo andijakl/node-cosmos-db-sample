@@ -21,6 +21,6 @@
   "license": "MIT",
   "dependencies": {
     "@azure/cosmos": "^4.9.3",
-    "express": "^4.22.2"
+    "express": "^5.2.1"
   }
 }
